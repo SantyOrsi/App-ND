@@ -1,4 +1,4 @@
-const Colors = {
+const Colors= {
   amarillo: '#F5C400',
   negro: '#1A1A1A',
   blanco: '#FFFFFF',

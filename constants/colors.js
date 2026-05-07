@@ -1,4 +1,4 @@
-const Colors= {
+const colors= {
   amarillo: '#F5C400',
   negro: '#1A1A1A',
   blanco: '#FFFFFF',
@@ -9,4 +9,4 @@ const Colors= {
   exito: '#43A047',
 };
 
-export default Colors;
+export default colors;

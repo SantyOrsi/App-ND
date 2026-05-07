@@ -7,8 +7,8 @@ import {
   KeyboardAvoidingView,
   Platform,
 } from 'react-native';
-import styles from '../constants/LoginStyles';
-import Colors from '../constants/Colors';
+import styles from '../constants/loginstyle';
+import colors from '../constants/colors';
 
 export default function Login() {
   const [email, setEmail] = useState('');
@@ -18,7 +18,7 @@ export default function Login() {
   const handleLogin = () => {
     setPresionado(true);
     setTimeout(() => setPresionado(false), 200);
-  }; //ACA VA LA PUTA LOGICA DE FIRESTONE PERO PAJA HACERLO AHORA CAPAZ CON IA PASA PERO NO AHORA
+  }; //ACA VA LA PUTA LOGICA DE FIREBASE   PERO PAJA HACERLO AHORA CAPAZ CON IA PASA PERO NO AHORA
 
   return (
     <KeyboardAvoidingView
@@ -44,7 +44,7 @@ export default function Login() {
         <TextInput
           style={styles.input}
           placeholder="correo@ejemplo.com"
-          placeholderTextColor={Colors.grisMedio}
+          placeholderTextColor={colors.grisMedio}
           value={email}
           onChangeText={setEmail}
           keyboardType="email-address"
@@ -55,7 +55,7 @@ export default function Login() {
         <TextInput
           style={styles.input}
           placeholder="••••••••"
-          placeholderTextColor={Colors.grisMedio}
+          placeholderTextColor={colors.grisMedio}
           value={password}
           onChangeText={setPassword}
           secureTextEntry

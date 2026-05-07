@@ -1,9 +1,9 @@
-import{stylesheet} from 'react-native';
-import Colors from './Colors';
-const styles = stylesheet.create({
+import{ StyleSheet } from 'react-native';
+import colors from './colors';
+const styles = StyleSheet.create({
     container:{
         flex:1,
-        backgroundColor:Colors.blanco,
+        backgroundColor:colors.blanco,
         flexDirection:'row',
     },
     panelIzquierdo:{
@@ -20,84 +20,84 @@ const styles = stylesheet.create({
         width:60,
         height:60,
         borderRadius:30,
-        backgroundColor:Colors.primario,
+        backgroundColor:colors.amarillo,
         justifyContent:'center',
         alignItems:'center',
         marginRight:15,
     },
     logoTexto:{
-        color:Colors.negro,
-        fontweight : 'bold',
-        fontsize : '16',
+        color:colors.negro,
+        fontWeight : 'bold',
+        fontSize : 16,
     },
     logoNombre: {
     fontSize: 18,
     fontWeight: 'bold',
   },
   logoNuevo: {
-    color: Colors.negro,
+    color: colors.negro,
   },
   logoDestino: {
-    color: Colors.amarillo,
+    color: colors.amarillo,
   },
   bienvenida: {
     fontSize: 13,
-    color: Colors.grisTexto,
+    color: colors.grisTexto,
     marginBottom: 2,
   },
   subBienvenida: {
     fontSize: 22,
     fontWeight: 'bold',
-    color: Colors.amarillo,
+    color: colors.amarillo,
     marginBottom: 4,
   },
   descripcion: {
     fontSize: 13,
-    color: Colors.grisTexto,
+    color: colors.grisTexto,
     marginBottom: 28,
   },
   label: {
     fontSize: 13,
-    color: Colors.negro,
+    color: colors.negro,
     marginBottom: 6,
     fontWeight: '500',
   },
   input: {
     borderBottomWidth: 1,
-    borderBottomColor: Colors.grisMedio,
+    borderBottomColor: colors.grisMedio,
     paddingVertical: 8,
     fontSize: 14,
-    color: Colors.negro,
+    color: colors.negro,
     marginBottom: 20,
   },
   olvide: {
     fontSize: 12,
-    color: Colors.amarillo,
+    color: colors.amarillo,
     textAlign: 'right',
     marginBottom: 28,
   },
   boton: {
     borderWidth: 2,
-    borderColor: Colors.negro,
+    borderColor: colors.negro,
     paddingVertical: 14,
     alignItems: 'center',
   },
   botonPresionado: {
-    backgroundColor: Colors.amarillo,
-    borderColor: Colors.amarillo,
+    backgroundColor: colors.amarillo,
+    borderColor: colors.amarillo,
   },
   botonTexto: {
     fontSize: 13,
     fontWeight: 'bold',
-    color: Colors.negro,
+    color: colors.negro,
     letterSpacing: 1,
   },
   botonTextoPresionado: {
-    color: Colors.negro,
+    color: colors.negro,
   },
   panelDerecho: {
     flex: 1,
-    backgroundColor: Colors.negro,
+    backgroundColor: colors.negro,
     justifyContent: 'center',
     alignItems: 'center',
     padding: 40,
@@ -105,12 +105,12 @@ const styles = stylesheet.create({
   frase: {
     fontSize: 36,
     fontWeight: 'bold',
-    color: Colors.blanco,
+    color: colors.blanco,
     textAlign: 'center',
     lineHeight: 48,
   },
   fraseAmarillo: {
-    color: Colors.amarillo,
+    color: colors.amarillo,
   },
 });
 

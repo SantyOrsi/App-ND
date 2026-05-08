@@ -6,11 +6,12 @@ import {
   TouchableOpacity,
   KeyboardAvoidingView,
   Platform,
+  ScrollView,
 } from 'react-native';
 import styles from '../constants/loginstyle';
 import colors from '../constants/colors';
 
-export default function Login() {
+export default function Login({ navigation }) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [presionado, setPresionado] = useState(false);
@@ -18,27 +19,39 @@ export default function Login() {
   const handleLogin = () => {
     setPresionado(true);
     setTimeout(() => setPresionado(false), 200);
-  }; //ACA VA LA PUTA LOGICA DE FIREBASE   PERO PAJA HACERLO AHORA CAPAZ CON IA PASA PERO NO AHORA
+    // navigation.replace('Dashboard');
+  }; // ACA VA LA PUTA LOGICA DE FIREBASE
 
   return (
     <KeyboardAvoidingView
-      style={styles.container}
+      style={styles.root}
       behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
     >
-      <View style={styles.panelIzquierdo}>
-        <View style={styles.logoContainer}>
-          <View style={styles.logoCirculo}>
-            <Text style={styles.logoTexto}>ND</Text>
+      <View style={styles.hero}>
+        <View style={styles.logoRow}>
+          <View style={styles.logoCircle}>
+            <Text style={styles.logoInitials}>ND</Text>
           </View>
-          <Text style={styles.logoNombre}>
+          <View style={{ flexDirection: 'row' }}>
             <Text style={styles.logoNuevo}>NUEVO </Text>
             <Text style={styles.logoDestino}>DESTINO</Text>
-          </Text>
+          </View>
         </View>
+        <Text style={styles.heroTitle}>
+          CADA VIAJE{'\n'}ES UN{'\n'}
+          <Text style={styles.heroAmarillo}>NUEVO{'\n'}</Text>
+          DESTINO
+        </Text>
+      </View>
 
-        <Text style={styles.bienvenida}>Bienvenido de vuelta</Text>
-        <Text style={styles.subBienvenida}>Iniciá sesión</Text>
-        <Text style={styles.descripcion}>Accedé al sistema de nuestra agencia</Text>
+      <ScrollView
+        style={styles.form}
+        contentContainerStyle={styles.formContent}
+        keyboardShouldPersistTaps="handled"
+      >
+        <Text style={styles.welcomeSub}>Bienvenido de vuelta</Text>
+        <Text style={styles.welcomeTitle}>Iniciá sesión</Text>
+        <Text style={styles.welcomeDesc}>Accedé al sistema de nuestra agencia</Text>
 
         <Text style={styles.label}>Correo Electrónico</Text>
         <TextInput
@@ -61,26 +74,18 @@ export default function Login() {
           secureTextEntry
         />
 
-        <Text style={styles.olvide}>Olvidé mi contraseña</Text>
+        <Text style={styles.forgot}>Olvidé mi contraseña</Text>
 
         <TouchableOpacity
-          style={[styles.boton, presionado && styles.botonPresionado]}
+          style={[styles.btn, presionado && styles.btnPressed]}
           onPress={handleLogin}
           activeOpacity={1}
         >
-          <Text style={[styles.botonTexto, presionado && styles.botonTextoPresionado]}>
+          <Text style={[styles.btnText, presionado && styles.btnTextPressed]}>
             INGRESAR AL SISTEMA
           </Text>
         </TouchableOpacity>
-      </View>
-
-      <View style={styles.panelDerecho}>
-        <Text style={styles.frase}>
-          CADA VIAJE{'\n'}ES UN{'\n'}
-          <Text style={styles.fraseAmarillo}>NUEVO{'\n'}</Text>
-          DESTINO
-        </Text>
-      </View>
+      </ScrollView>
     </KeyboardAvoidingView>
   );
 }

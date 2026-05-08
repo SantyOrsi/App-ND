@@ -1,116 +1,121 @@
-import{ StyleSheet } from 'react-native';
+import { StyleSheet } from 'react-native';
 import colors from './colors';
 const styles = StyleSheet.create({
-    container:{
-        flex:1,
-        backgroundColor:colors.blanco,
-        flexDirection:'row',
-    },
-    panelIzquierdo:{
-        flex:1,
-        padding:40,
-        justifyContent:'center',
-    },
-    logoContainer:{
-        flexDirection:'row',    
-        alignItems:'center',
-        marginBottom:30,
-    },
-    logoCirculo:{
-        width:60,
-        height:60,
-        borderRadius:30,
-        backgroundColor:colors.amarillo,
-        justifyContent:'center',
-        alignItems:'center',
-        marginRight:15,
-    },
-    logoTexto:{
-        color:colors.negro,
-        fontWeight : 'bold',
-        fontSize : 16,
-    },
-    logoNombre: {
-    fontSize: 18,
-    fontWeight: 'bold',
+   root: {
+    flex: 1,
+    backgroundColor: '#fff',
+  },
+
+  // Hero
+  hero: {
+    backgroundColor: colors.negro,
+    paddingHorizontal: 32,
+    paddingTop: 56,
+    paddingBottom: 40,
+  },
+  logoRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 12,
+    marginBottom: 28,
+  },
+  logoCircle: {
+    width: 48,
+    height: 48,
+    borderRadius: 24,
+    backgroundColor: colors.amarillo,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  logoInitials: {
+    color: colors.negro,
+    fontWeight: '700',
+    fontSize: 14,
+  },
+  logoName: {
+    fontSize: 16,
+    fontWeight: '700',
   },
   logoNuevo: {
-    color: colors.negro,
+    color: colors.blanco,
   },
   logoDestino: {
     color: colors.amarillo,
   },
-  bienvenida: {
-    fontSize: 13,
+  heroTitle: {
+    fontSize: 34,
+    fontWeight: '700',
+    color: colors.blanco,
+    lineHeight: 42,
+  },
+  heroAmarillo: {
+    color: colors.amarillo,
+  },
+
+  // Formulario
+  form: {
+    flex: 1,
+    backgroundColor: colors.blanco,
+  },
+  formContent: {
+    padding: 32,
+    paddingTop: 36,
+  },
+  welcomeSub: {
+    fontSize: 12,
     color: colors.grisTexto,
     marginBottom: 2,
   },
-  subBienvenida: {
+  welcomeTitle: {
     fontSize: 22,
-    fontWeight: 'bold',
+    fontWeight: '700',
     color: colors.amarillo,
     marginBottom: 4,
   },
-  descripcion: {
-    fontSize: 13,
+  welcomeDesc: {
+    fontSize: 12,
     color: colors.grisTexto,
     marginBottom: 28,
   },
   label: {
-    fontSize: 13,
+    fontSize: 12,
+    fontWeight: '500',
     color: colors.negro,
     marginBottom: 6,
-    fontWeight: '500',
   },
   input: {
-    borderBottomWidth: 1,
+    borderBottomWidth: 1.5,
     borderBottomColor: colors.grisMedio,
-    paddingVertical: 8,
+    paddingVertical: 10,
     fontSize: 14,
     color: colors.negro,
-    marginBottom: 20,
+    marginBottom: 22,
   },
-  olvide: {
+  forgot: {
     fontSize: 12,
     color: colors.amarillo,
     textAlign: 'right',
-    marginBottom: 28,
+    marginBottom: 32,
   },
-  boton: {
+  btn: {
     borderWidth: 2,
     borderColor: colors.negro,
-    paddingVertical: 14,
+    paddingVertical: 16,
     alignItems: 'center',
+    borderRadius: 2,
   },
-  botonPresionado: {
+  btnPressed: {
     backgroundColor: colors.amarillo,
     borderColor: colors.amarillo,
   },
-  botonTexto: {
-    fontSize: 13,
-    fontWeight: 'bold',
+  btnText: {
+    fontSize: 12,
+    fontWeight: '700',
     color: colors.negro,
-    letterSpacing: 1,
+    letterSpacing: 1.5,
   },
-  botonTextoPresionado: {
+  btnTextPressed: {
     color: colors.negro,
-  },
-  panelDerecho: {
-    flex: 1,
-    backgroundColor: colors.negro,
-    justifyContent: 'center',
-    alignItems: 'center',
-    padding: 40,
-  },
-  frase: {
-    fontSize: 36,
-    fontWeight: 'bold',
-    color: colors.blanco,
-    textAlign: 'center',
-    lineHeight: 48,
-  },
-  fraseAmarillo: {
-    color: colors.amarillo,
   },
 });
 

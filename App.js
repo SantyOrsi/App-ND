@@ -1,3 +1,3 @@
-import Login from './app/index';
+import Navigation from './constants/navigation';
 
-export default Login;
+export default Navigation;

@@ -8,7 +8,7 @@ import {
   Platform,
   ScrollView,
 } from 'react-native';
-import styles from '../constants/loginstyle';
+import styles from '../constants/Loginstyle';
 import colors from '../constants/colors';
 
 export default function Login({ navigation }) {
@@ -17,9 +17,11 @@ export default function Login({ navigation }) {
   const [presionado, setPresionado] = useState(false);
 
   const handleLogin = () => {
-    setPresionado(true);
-    setTimeout(() => setPresionado(false), 200);
-    // navigation.replace('Dashboard');
+  setPresionado(true);
+  setTimeout(() => {
+    setPresionado(false);
+    navigation.replace('Dashboard'); // 👈 tiene que estar DENTRO del timeout
+    }, 200);
   }; // ACA VA LA PUTA LOGICA DE FIREBASE
 
   return (

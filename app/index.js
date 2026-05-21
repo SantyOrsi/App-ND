@@ -19,7 +19,7 @@ export default function Login({ navigation }) {
   const handleLogin = () => {
     setPresionado(true);
     setTimeout(() => setPresionado(false), 200);
-    // navigation.replace('Dashboard');
+     navigation.replace('Dashboard');
   }; // ACA VA LA PUTA LOGICA DE FIREBASE
 
   return (

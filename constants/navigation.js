@@ -3,9 +3,10 @@ import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-import Login     from '../screens/Login';
-import Dashboard from '../screens/Dashboard';
-// import Traslado from '../screens/Traslado';  // cuando lo tengamos
+import Login     from '../app/index';
+import Dashboard from '../app/dashboardgeneral';
+import Traslado from '../app/traslado';
+
 
 const Stack = createNativeStackNavigator();
 
@@ -18,7 +19,7 @@ export default function Navigation() {
       >
         <Stack.Screen name="Login"     component={Login} />
         <Stack.Screen name="Dashboard" component={Dashboard} />
-        {/* <Stack.Screen name="Traslado"  component={Traslado} /> ajiojiji*/}
+        <Stack.Screen name="Traslado" component={Traslado} />
       </Stack.Navigator>
     </NavigationContainer>
   );

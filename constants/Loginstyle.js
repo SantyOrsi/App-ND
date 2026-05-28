@@ -3,7 +3,11 @@ import colors from './colors';
 const styles = StyleSheet.create({
    root: {
     flex: 1,
+
     backgroundColor:colors.blanco,
+
+    backgroundColor: colors.blanco,
+
   },
 
   // Hero

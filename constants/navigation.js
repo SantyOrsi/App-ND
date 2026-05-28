@@ -4,8 +4,13 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import Login     from '../app/index';
+
 import Dashboard from '../app/dashboardgeneral';
 import Traslado from '../app/traslado';
+
+
+
+// import Traslado from '../screens/Traslado';  // cuando lo tengamos
 
 
 const Stack = createNativeStackNavigator();
